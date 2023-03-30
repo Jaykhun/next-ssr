@@ -1,3 +1,4 @@
+import { IPost } from './post.interface'
 export interface IUser {
     "id": number,
     "name": string,
@@ -27,12 +28,6 @@ export interface IUserData {
 }
 
 export interface IUserSingleData{
-    user: IUser
-}
-
-export interface IPost {
-    "userId": number,
-    "id": number,
-    "title": string,
-    "body": string
+    user: IUser,
+    userPost: IPost
 }
