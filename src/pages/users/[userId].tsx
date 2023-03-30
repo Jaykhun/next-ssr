@@ -13,7 +13,7 @@ const UserPage: FC<IUserSingleData> = ({ user }) => {
     )
 }
 
-export const getServerSideProps = async (context: string) => {
+export const getServerSideProps = async (context: any) => {
     const res = await fetch(`https://jsonplaceholder.typicode.com/users/${context.params.userId}`)
     const user = await res.json()
 

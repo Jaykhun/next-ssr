@@ -8,8 +8,8 @@ const HomePage: NextPage<IUserData> = ({ users }) => {
       <div className='text-3xl my-3 font-bold'>Users</div>
       <div className='users'>
         {users?.map(user =>
-          <div className='users__item'>
-            <Link href={`/users/${user.id}`} key={user.id} className='display: inline-block font-medium text-2xl'>{user.username}</Link>
+          <div className='users__item' key={user.id}>
+            <Link href={`/users/${user.id}`} className='display: inline-block font-medium text-2xl'>{user.username}</Link>
           </div>
         )}
       </div>
